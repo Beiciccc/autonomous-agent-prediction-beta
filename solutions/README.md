@@ -1,3 +1,7 @@
 # Public configurations
 
-Cleaned, reproducible configurations associated with scored experiments will be added here. Each release will link back to its experiment-log entry and exclude credentials, generated archives, and local-only artifacts.
+Cleaned, reproducible configurations associated with scored experiments are indexed here. Each release links to its experiment-log entry and excludes credentials, generated archives, raw competition data, and local-only artifacts.
+
+| ID | Public score | Source | Kaggle Code |
+| --- | ---: | --- | --- |
+| s001 | 0.822 | [`solutions/s001`](s001) | [Robust Tabular Portfolio Submission](https://www.kaggle.com/code/beicicc/robust-tabular-portfolio-submission) |

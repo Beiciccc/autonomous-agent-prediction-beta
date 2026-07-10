@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-Repository initialized. No Kaggle submission has been recorded yet.
+The initial scored configuration, [`s001`](solutions/s001), completed as Kaggle submission `54533337` with public score **0.822**. The matching source is also available as a public [Kaggle Code notebook](https://www.kaggle.com/code/beicicc/robust-tabular-portfolio-submission).
 
 ## Repository layout
 
@@ -21,6 +21,9 @@ Repository initialized. No Kaggle submission has been recorded yet.
 - `data/README.md` — data provenance and redistribution boundary.
 - `experiments/experiment_log.md` — chronological experiment ledger.
 - `results/public_scores.csv` — public leaderboard observations.
+- `results/s001_meta_validation_summary.csv` — aggregate validation statistics across the sixteen visible tasks.
 - `solutions/` — cleaned configurations released with scored experiments.
 
 Raw competition files and generated submission archives are not redistributed here. They are available from the official Kaggle competition page subject to its rules.
+
+Original source code in this repository is released under the [MIT License](LICENSE). Competition data and organizer-supplied materials are excluded.
