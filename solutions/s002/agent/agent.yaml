@@ -1,0 +1,6 @@
+agent_class: SequentialAgent
+name: weighted_cv_pipeline
+sub_agents:
+  - config_path: agents/quick.yaml
+  - config_path: agents/portfolio.yaml
+  - config_path: agents/select.yaml

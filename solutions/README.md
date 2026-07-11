@@ -5,3 +5,4 @@ Cleaned, reproducible configurations associated with scored experiments are inde
 | ID | Public score | Source | Kaggle Code |
 | --- | ---: | --- | --- |
 | s001 | 0.822 | [`solutions/s001`](s001) | [Robust Tabular Portfolio Submission](https://www.kaggle.com/code/beicicc/robust-tabular-portfolio-submission) |
+| s002 | 0.822 | [`solutions/s002`](s002) | [Five-Fold Weighted Portfolio Submission](https://www.kaggle.com/code/beicicc/five-fold-weighted-portfolio-submission) |
