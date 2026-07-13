@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The best public score remains **0.822**. [`s001`](solutions/s001) first reached it as submission `54533337`; the five-fold weighted variant [`s002`](solutions/s002) later matched it as submission `54571974`. The sample-size-adaptive [`s003`](solutions/s003) completed at **0.820** and was not adopted as the best configuration. All three releases have corresponding public Kaggle Code notebooks.
+The best public score remains **0.822**. [`s001`](solutions/s001) first reached it as submission `54533337`; the five-fold weighted variant [`s002`](solutions/s002) later matched it as submission `54571974`. The sample-size experiments [`s003`](solutions/s003) and [`s004`](solutions/s004) each completed at **0.820** and are retained as diagnostic configurations rather than the recommended version. All four releases have corresponding public Kaggle Code notebooks.
 
 ## Repository layout
 
@@ -21,7 +21,7 @@ The best public score remains **0.822**. [`s001`](solutions/s001) first reached 
 - `data/README.md` — data provenance and redistribution boundary.
 - `experiments/experiment_log.md` — chronological experiment ledger.
 - `results/public_scores.csv` — public leaderboard observations.
-- `results/s001_meta_validation_summary.csv`, `results/s002_meta_validation_summary.csv`, and `results/s003_meta_validation_summary.csv` — aggregate validation statistics across the sixteen visible tasks.
+- `results/s001_meta_validation_summary.csv` through `results/s004_meta_validation_summary.csv` — aggregate validation statistics across the sixteen visible tasks.
 - `solutions/` — cleaned configurations released with scored experiments.
 
 Raw competition files and generated submission archives are not redistributed here. They are available from the official Kaggle competition page subject to its rules.

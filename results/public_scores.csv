@@ -2,3 +2,4 @@ experiment_id,submitted_at_utc,kaggle_submission_id,kaggle_status,public_score,d
 s001,2026-07-10T16:07:13.390Z,54533337,COMPLETE,0.822,,solutions/s001
 s002,2026-07-11T12:48:44.680Z,54571974,COMPLETE,0.822,0.000,solutions/s002
 s003,2026-07-12T04:06:48.063Z,54594314,COMPLETE,0.820,-0.002,solutions/s003
+s004,2026-07-13T00:54:51.640Z,54627211,COMPLETE,0.820,-0.002,solutions/s004
