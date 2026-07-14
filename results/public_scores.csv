@@ -1,5 +1,6 @@
-experiment_id,submitted_at_utc,kaggle_submission_id,kaggle_status,public_score,delta_vs_previous_best,public_code_ref
-s001,2026-07-10T16:07:13.390Z,54533337,COMPLETE,0.822,,solutions/s001
-s002,2026-07-11T12:48:44.680Z,54571974,COMPLETE,0.822,0.000,solutions/s002
-s003,2026-07-12T04:06:48.063Z,54594314,COMPLETE,0.820,-0.002,solutions/s003
-s004,2026-07-13T00:54:51.640Z,54627211,COMPLETE,0.820,-0.002,solutions/s004
+experiment_id,submitted_at_utc,kaggle_submission_id,kaggle_status,public_score,delta_vs_previous_best,public_code_url
+s001,2026-07-10T16:07:13.390Z,54533337,COMPLETE,0.822,,https://www.kaggle.com/code/beicicc/robust-tabular-portfolio-submission
+s002,2026-07-11T12:48:44.680Z,54571974,COMPLETE,0.822,0.000,https://www.kaggle.com/code/beicicc/five-fold-weighted-portfolio-submission
+s003,2026-07-12T04:06:48.063Z,54594314,COMPLETE,0.820,-0.002,https://www.kaggle.com/code/beicicc/adaptive-small-sample-portfolio-submission
+s004,2026-07-13T00:54:51.640Z,54627211,COMPLETE,0.820,-0.002,https://www.kaggle.com/code/beicicc/small-sample-variance-reduction-submission
+s005,2026-07-14T08:25:07.483Z,54678654,COMPLETE,0.822,0.000,https://www.kaggle.com/code/beicicc/guarded-adaptive-feature-view-submission
