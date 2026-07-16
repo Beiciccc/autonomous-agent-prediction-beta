@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed experiment, `s006`, reached **0.822** as Kaggle submission `54707241`, matching the retained public best from `s001`, `s002`, and `s005`. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All six scored experiments have corresponding public Kaggle Code notebooks.
+The latest completed experiment, `s007`, reached **0.822** as Kaggle submission `54748613`. It was an exact-source score-level replication of `s006` and matched the retained public best from `s001`, `s002`, `s005`, and `s006`. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All seven scored experiments have corresponding public Kaggle Code notebooks.
 
 ## Repository layout
 
