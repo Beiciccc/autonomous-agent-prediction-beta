@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-10
+Last reviewed: 2026-07-17
 
 ## Task
 
@@ -13,6 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-17.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
