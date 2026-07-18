@@ -12,3 +12,4 @@ Completed scored experiments and their public Kaggle Code references.
 | s006 | 0.822 | [Scored Experiment s006](https://www.kaggle.com/code/beicicc/single-adaptive-selection-guard-submission) |
 | s007 | 0.822 | [Scored Experiment s007](https://www.kaggle.com/code/beicicc/single-adaptive-selection-guard-replication) |
 | s008 | 0.822 | [Scored Experiment s008](https://www.kaggle.com/code/beicicc/deterministic-weighted-portfolio-replication) |
+| s009 | 0.822 | [Scored Experiment s009](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s009) |
