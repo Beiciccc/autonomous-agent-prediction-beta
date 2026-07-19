@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-18
+Last reviewed: 2026-07-19
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-18.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-19.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -52,3 +52,17 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, ADK dry compilation, CRC, and byte-level reconstruction all passed.
 - Public Kaggle Code version 1 at `beicicc/deterministic-portfolio-replication-s009` reached `KernelWorkerStatus.COMPLETE` and reproduced the scored package byte for byte.
 - Interpretation: s009 matched s002, s008, and the retained public best at displayed three-decimal precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
+
+## 2026-07-19 pre-submission experiment
+
+- A fold-local class-conditional prototype-distance view completed all eight design tasks and 40 outer folds with zero errors. It learned six negative-class and six positive-class prototypes, then fit a regularized logistic model using only 12 squared prototype distances and two fixed distance contrasts.
+- Seven of eight tasks met the fixed dual-anchor correlation cap, but every standalone candidate was weaker than its anchor. Only two fixed 80/20 blends improved over their anchors; one missed the gain and correlation gates, while the other remained below its stronger manifest reference.
+- No candidate passed all same-form admission requirements, so the experiment emitted 0 candidates and retained the existing reference on all eight tasks. Decision: `DESIGN_NO_GO`; no confirmation run or package change was made.
+
+## s010 third deterministic reference replication
+
+- With the geometric candidate rejected, the exact s002 archive was selected as an operational reference replication, not as a model improvement or expected leaderboard gain.
+- Official submission row `54820563`, dated 2026-07-19 02:47:21.210 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, ADK dry compilation, CRC, source-tree, and byte-level reconstruction checks passed.
+- Public Kaggle Code version 1 at `beicicc/deterministic-portfolio-replication-s010` reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s010 matched s002, s008, s009, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
