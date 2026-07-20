@@ -14,3 +14,4 @@ Completed scored experiments and their public Kaggle Code references.
 | s008 | 0.822 | [Scored Experiment s008](https://www.kaggle.com/code/beicicc/deterministic-weighted-portfolio-replication) |
 | s009 | 0.822 | [Scored Experiment s009](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s009) |
 | s010 | 0.822 | [Scored Experiment s010](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s010) |
+| s011 | 0.822 | [Scored Experiment s011](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011) |

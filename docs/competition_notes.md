@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-19
+Last reviewed: 2026-07-20
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-19.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-20.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -66,3 +66,16 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, ADK dry compilation, CRC, source-tree, and byte-level reconstruction checks passed.
 - Public Kaggle Code version 1 at `beicicc/deterministic-portfolio-replication-s010` reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s010 matched s002, s008, s009, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
+
+## 2026-07-20 pre-submission experiments
+
+- A fixed unsupervised random-tree leaf representation with sparse L1 logistic regression completed all eight design tasks and 40 outer folds with zero errors. Its Spearman correlations with both exact-reference top models ranged from 0.615 to 0.923, satisfying the diversity cap, but every standalone prediction and every fixed 80/20 blend was weaker than the corresponding manifest reference. It emitted 0 candidates and was rejected.
+- A duplicate-group cross-validation screen found exact duplicate feature vectors in only one of the eight design tasks. That task contained 1,405 duplicate rows across 637 duplicate groups, 529 of which crossed the ordinary stratified folds. The remaining seven tasks had no exact duplicate groups, so the fixed two-task breadth requirement could not be met. It emitted 0 candidates and was rejected.
+
+## s011 fourth deterministic reference replication
+
+- With both new directions rejected, the exact s002 archive was selected as an operational reference replication, not as a model improvement or expected leaderboard gain.
+- Official submission row `54843927`, dated 2026-07-20 03:17:59.447 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, two ADK dry compilations, CRC, source-tree, and byte-level reconstruction checks passed.
+- Public Kaggle Code version 1 at `beicicc/deterministic-portfolio-replication-s011` reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s011 matched s002, s008, s009, s010, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
