@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed experiment, `s011`, reached **0.822** as Kaggle submission `54843927`. It was a fourth byte-identical package replication of `s002` and matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All eleven scored experiments have corresponding public Kaggle Code notebooks.
+The latest completed experiment, `s012`, reached **0.822** as Kaggle submission `54866430`. It was a fifth byte-identical package replication of `s002` and matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twelve scored experiments have corresponding public Kaggle Code records; `s012` is preserved as Version 2 of the `s011` notebook.
 
 ## Repository layout
 
