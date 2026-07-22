@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-21
+Last reviewed: 2026-07-22
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-21.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-22.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -93,3 +93,17 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, dry compilation, CRC, source-tree, and byte-level reconstruction checks passed.
 - [Public Kaggle Code Version 2](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=336820326) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible. Version 1 remains the s011 record.
 - Interpretation: s012 matched s002, s008, s009, s010, s011, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
+
+## 2026-07-22 pre-submission experiment
+
+- A deterministic synthetic robustness matrix exercised normal execution, model import and fit failures, complete and partial model-family failures, submission and selection rejections, missing output manifests, temporarily absent scores, tied scores, default final selection, and time boundaries.
+- Fifteen observable scenarios passed. One during-loop time boundary could not be observed through the frozen interface and was recorded as a contract gap rather than a pass.
+- The constant-prior recovery files were accepted by the current scoring context and produced the expected AUC floor of `0.5`. The fixed change gate was therefore not triggered, and the experiment selected the unchanged reference package.
+
+## s013 sixth deterministic reference replication
+
+- With no validated source change, the exact s002 archive was selected as an operational reference replication, not as a model improvement or expected leaderboard gain.
+- Official submission row `54892057`, dated 2026-07-22 02:32:35.957 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, dry compilation, CRC, source-tree, and byte-level reconstruction checks passed.
+- [Public Kaggle Code Version 3](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=337058867) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible. Earlier versions remain the s011 and s012 records.
+- Interpretation: s013 matched s002, s008, s009, s010, s011, s012, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
