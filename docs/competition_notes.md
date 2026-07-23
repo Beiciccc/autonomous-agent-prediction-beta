@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-22
+Last reviewed: 2026-07-23
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-22.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-23.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -107,3 +107,16 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, dry compilation, CRC, source-tree, and byte-level reconstruction checks passed.
 - [Public Kaggle Code Version 3](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=337058867) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible. Earlier versions remain the s011 and s012 records.
 - Interpretation: s013 matched s002, s008, s009, s010, s011, s012, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
+
+## 2026-07-23 pre-submission experiment
+
+- A single post-training time check was evaluated as a minimal control change. Structural checks, dry compilation, and observed 7.99/8.00-minute initial and 3.99/4.00-minute post-training boundaries passed.
+- The required malformed-status coverage was incomplete: the non-finite case exercised a null value rather than NaN or infinity. The fixed validation gate therefore rejected the change, and the submitted package remained unchanged.
+
+## s014 seventh deterministic reference replication
+
+- With no validated source change, the exact s002 archive was selected as an operational reference replication, not as a model improvement or expected leaderboard gain.
+- Official submission row `54919421`, dated 2026-07-23 04:52:49.597 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, dry compilation, CRC, source-tree, and byte-level reconstruction checks passed.
+- [Public Kaggle Code Version 4](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=337330758) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible. Earlier versions remain the s011, s012, and s013 records.
+- Interpretation: s014 matched s002, s008, s009, s010, s011, s012, s013, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
