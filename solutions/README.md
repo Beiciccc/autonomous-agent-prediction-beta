@@ -18,3 +18,4 @@ Completed scored experiments and their public Kaggle Code references.
 | s012 | 0.822 | [Scored Experiment s012 (Version 2)](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=336820326) |
 | s013 | 0.822 | [Scored Experiment s013 (Version 3)](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=337058867) |
 | s014 | 0.822 | [Scored Experiment s014 (Version 4)](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=337330758) |
+| s015 | 0.822 | [Scored Experiment s015](https://www.kaggle.com/code/beicicc/observable-post-fit-time-gate-s015) |

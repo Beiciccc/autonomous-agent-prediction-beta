@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed experiment, `s014`, reached **0.822** as Kaggle submission `54919421`. It was a seventh byte-identical package replication of `s002` and matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All fourteen scored experiments have corresponding public Kaggle Code records; `s014` is preserved as Version 4 of the `s011` notebook.
+The latest completed experiment, `s015`, reached **0.822** as Kaggle submission `54940125`. It added one operational post-fit time checkpoint while leaving the model, features, validation, blending, and prediction formulas unchanged, so its expected AUC gain was zero. It matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All fifteen scored experiments have corresponding public Kaggle Code records.
 
 ## Repository layout
 

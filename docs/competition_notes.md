@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-23
+Last reviewed: 2026-07-24
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-23.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-24.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -120,3 +120,17 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive was the exact 12,381-byte s002 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `1f4495d72d5107a4a1b0c63306eb880476aaa93ca67a1af45190b8ab11ff8f0e`. Fresh official validation, dry compilation, CRC, source-tree, and byte-level reconstruction checks passed.
 - [Public Kaggle Code Version 4](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s011?scriptVersionId=337330758) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible. Earlier versions remain the s011, s012, and s013 records.
 - Interpretation: s014 matched s002, s008, s009, s010, s011, s012, s013, and the retained public best at displayed precision. This remains a package-level score replication and does not establish prediction identity or runtime-path identity.
+
+## 2026-07-24 pre-submission experiment
+
+- The post-fit time checkpoint was re-evaluated with sixteen deterministic control cases. Healthy paths preserved the submitted candidates and final selection while adding exactly one fresh status reading after portfolio fitting.
+- Eight malformed status forms were exercised separately: an error, a missing value, a boolean, a string, null, NaN, positive infinity, and negative infinity. Each took the conservative quick-only path.
+- Official format validation, source closure, execution-budget checks, deterministic archive reconstruction, and semantic negative tests passed. The expected AUC gain remained zero because no model, feature, validation, blend, or prediction formula changed.
+
+## s015 observable post-fit time checkpoint
+
+- The admitted change adds one fresh time reading after the portfolio script returns and skips candidate-file submissions when fewer than four minutes remain.
+- Official submission row `54940125`, dated 2026-07-24 01:33:20.897 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,399 bytes, has root `agent.yaml`, and has SHA-256 `d3f34a242753835837aaac5116e40bc3fc16042145c2e3ab6dbcf57be9061309`. Only `prompts/portfolio.md` changed from s014.
+- [Public Kaggle Code](https://www.kaggle.com/code/beicicc/observable-post-fit-time-gate-s015) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s015 matched the retained public best at displayed precision. This result is consistent with the preregistered zero-AUC-gain expectation and is an operational record, not evidence of a modeling improvement.
