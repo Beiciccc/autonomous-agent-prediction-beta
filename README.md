@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed experiment, `s015`, reached **0.822** as Kaggle submission `54940125`. It added one operational post-fit time checkpoint while leaving the model, features, validation, blending, and prediction formulas unchanged, so its expected AUC gain was zero. It matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All fifteen scored experiments have corresponding public Kaggle Code records.
+The latest completed experiment, `s016`, reached **0.822** as Kaggle submission `54971495`. A fixed categorical AODE screen completed all eight design tasks with zero errors but emitted no candidates, so the exact s015 archive was submitted unchanged and its expected AUC gain was zero. It matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All sixteen scored experiments have corresponding public Kaggle Code records.
 
 ## Repository layout
 
