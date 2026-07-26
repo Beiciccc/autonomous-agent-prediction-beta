@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-25
+Last reviewed: 2026-07-26
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-25.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-26.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -147,3 +147,16 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive was the exact 12,399-byte s015 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `d3f34a242753835837aaac5116e40bc3fc16042145c2e3ab6dbcf57be9061309`.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s016?scriptVersionId=337821967) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s016 matched s015 and the retained public best at displayed precision. This is an exact package-level score replication, not evidence of a modeling improvement or prediction-level identity.
+
+## 2026-07-26 pre-submission decision
+
+- A pre-experiment review required any further model screen to have an untouched task-level confirmation set.
+- All sixteen visible tasks had already been observed in earlier experiments, leaving no independent confirmation tasks. No new model screen or training was run; `DESIGN_NO_GO` records the decision not to authorize one. No candidate was created and no package change was made.
+
+## s017 exact operational replication
+
+- With no independently confirmed source change, the exact s015/s016 archive was selected as an operational replication, not as a model improvement or expected leaderboard gain.
+- Official submission row `54995888`, dated 2026-07-26 08:25:17.160 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive was the exact 12,399-byte s015/s016 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `d3f34a242753835837aaac5116e40bc3fc16042145c2e3ab6dbcf57be9061309`.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s017?scriptVersionId=338030601) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s017 matched s015, s016, and the retained public best at displayed precision. This is an exact package-level score replication, not evidence of a modeling improvement or prediction-level identity.
