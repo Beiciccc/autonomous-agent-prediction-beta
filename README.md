@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed scored run, `s017`, reached **0.822** as Kaggle submission `54995888`. All sixteen visible tasks had already been observed, leaving no untouched task-level confirmation set, so no new model screen or training was run. The exact s015/s016 archive was submitted unchanged and its expected AUC gain was zero. It matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All seventeen scored runs have corresponding public Kaggle Code records.
+The latest completed scored run, `s018`, reached **0.822** as Kaggle submission `55023437`. All sixteen visible tasks remained previously observed, leaving no untouched task-level confirmation set, so no new model screen or training was run. The exact s015/s016/s017 archive was submitted unchanged and its expected AUC gain was zero. It matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All eighteen scored runs have corresponding public Kaggle Code records.
 
 ## Repository layout
 
