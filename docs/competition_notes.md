@@ -179,6 +179,7 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 
 - The untouched task-level confirmation requirement was applied before any further model work.
 - All sixteen visible tasks remained previously observed, leaving no independent confirmation tasks. No new model screen or training was run; `DESIGN_NO_GO` records the pre-experiment decision not to authorize one. No candidate was created and no package change was made.
+- In the [referenced discussion](https://www.kaggle.com/competitions/autonomous-agent-prediction-beta/discussion/729897#3504169), Kaggle Staff stated that no server-side change had been identified on Kaggle's side. This records that investigation result only; it does not establish the cause of the reported HTTP 400 failure, guarantee service stability, or validate every package.
 
 ## s019 exact operational replication
 
@@ -186,5 +187,5 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - Official submission row `55042987`, dated 2026-07-28 02:21:12.763 UTC, reached `COMPLETE` with public score `0.822`.
 - The uploaded archive was the exact 12,399-byte s015/s016/s017/s018 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `d3f34a242753835837aaac5116e40bc3fc16042145c2e3ab6dbcf57be9061309`.
 - Fresh official format validation and dry compilation passed. Independent checks confirmed the root layout, member count, CRC integrity, path safety, and archive digest.
-- [Public Kaggle Code Version 2](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s019?scriptVersionId=338437681) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- [Public Kaggle Code Version 2](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s019?scriptVersionId=338437903) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s019 matched s015, s016, s017, s018, and the retained public best at displayed precision. This is an exact package-level score replication, not evidence of a modeling improvement or prediction-level identity.
