@@ -189,3 +189,17 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - Fresh official format validation and dry compilation passed. Independent checks confirmed the root layout, member count, CRC integrity, path safety, and archive digest.
 - [Public Kaggle Code Version 2](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s019?scriptVersionId=338437903) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s019 matched s015, s016, s017, s018, and the retained public best at displayed precision. This is an exact package-level score replication, not evidence of a modeling improvement or prediction-level identity.
+
+## 2026-07-29 pre-submission decision
+
+- The untouched task-level confirmation requirement remained in force before any further model work.
+- All sixteen visible tasks remained previously observed, leaving no independent confirmation tasks. No new model screen or training was run; `DESIGN_NO_GO` records the pre-experiment decision not to authorize one. No candidate was created and no package change was made.
+
+## s020 exact operational replication
+
+- With no independently confirmed source change, the exact s015/s016/s017/s018/s019 archive was selected as an operational replication, not as a model improvement or expected leaderboard gain.
+- Official submission row `55067615`, dated 2026-07-29 00:09:39.040 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive was the exact 12,399-byte s015/s016/s017/s018/s019 package with 18 ZIP entries, 12 regular source files, root `agent.yaml`, and SHA-256 `d3f34a242753835837aaac5116e40bc3fc16042145c2e3ab6dbcf57be9061309`.
+- Independent checks confirmed the root layout, member count, CRC integrity, path safety, archive digest, and byte-for-byte equality with the retained package.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s020?scriptVersionId=338687407) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s020 matched s015, s016, s017, s018, s019, and the retained public best at displayed precision. This is an exact package-level score replication, not evidence of a modeling improvement or prediction-level identity.
