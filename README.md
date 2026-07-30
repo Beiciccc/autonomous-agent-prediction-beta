@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed scored run, `s020`, reached **0.822** as Kaggle submission `55067615`. All sixteen visible tasks remained previously observed, leaving no untouched task-level confirmation set, so no new model screen or training was run. The exact s015/s016/s017/s018/s019 archive was submitted unchanged and its expected AUC gain was zero. It matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty scored runs have corresponding public Kaggle Code records.
+The latest completed scored run, `s021`, reached **0.822** as Kaggle submission `55097537`. It was an attributed, unchanged replication of Naji's public Version 9 package, whose source page reports **0.823**. The exact 13,727-byte archive did not reproduce that displayed source score in this run; it matched the retained public best at the leaderboard's displayed three-decimal precision. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-one scored runs have corresponding public Kaggle Code records.
 
 ## Repository layout
 

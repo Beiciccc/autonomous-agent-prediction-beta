@@ -203,3 +203,16 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - Independent checks confirmed the root layout, member count, CRC integrity, path safety, archive digest, and byte-for-byte equality with the retained package.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s020?scriptVersionId=338687407) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s020 matched s015, s016, s017, s018, s019, and the retained public best at displayed precision. This is an exact package-level score replication, not evidence of a modeling improvement or prediction-level identity.
+
+## 2026-07-30 public-package replication experiment
+
+- [Naji's public Version 9](https://www.kaggle.com/code/najiama/lb-0-823-the-freeroll-gemini-pro-strategy?scriptVersionId=338695798) reports public score `0.823` and supplies a frozen package under Apache License 2.0.
+- The source notebook credits its core machine-learning scripts to Kun Zhang (`beicicc`) and the Version 9 extension to Naji (`najiama`). The s021 experiment evaluates that exact public package without claiming independent development.
+- The frozen archive passed current format validation, dry compilation, CRC, path-safety, source-tree reconstruction, and a synthetic schema smoke test. No visible-task result was used to tune or select a modified variant.
+
+## s021 attributed public V9 package replication
+
+- Official submission row `55097537`, dated 2026-07-30 02:42:52.797 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive was the unchanged 13,727-byte Version 9 package with 21 ZIP entries, 15 regular source files, root `agent.yaml`, and SHA-256 `1935843ecddd9744ab5a67b9dec68bf0658ebfb8ef1c7221acd37703e097669d`.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/public-v9-package-replication-s021?scriptVersionId=338969249) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, included the Apache 2.0 license and third-party attribution outside the frozen archive, and was anonymously accessible.
+- Interpretation: s021 did not reproduce the source page's displayed `0.823`; it matched the retained `0.822` best. The package contains a nonzero-temperature runtime optimization stage, so exact source bytes do not guarantee identical runtime actions or scores. This is an attributed package-level replication, not evidence of prediction-level or runtime-path identity.
