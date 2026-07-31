@@ -216,3 +216,18 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive was the unchanged 13,727-byte Version 9 package with 21 ZIP entries, 15 regular source files, root `agent.yaml`, and SHA-256 `1935843ecddd9744ab5a67b9dec68bf0658ebfb8ef1c7221acd37703e097669d`.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/public-v9-package-replication-s021?scriptVersionId=338969249) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, included the Apache 2.0 license and third-party attribution outside the frozen archive, and was anonymously accessible.
 - Interpretation: s021 did not reproduce the source page's displayed `0.823`; it matched the retained `0.822` best. The package contains a nonzero-temperature runtime optimization stage, so exact source bytes do not guarantee identical runtime actions or scores. This is an attributed package-level replication, not evidence of prediction-level or runtime-path identity.
+
+## 2026-07-31 StringDtype compatibility experiment
+
+- The experiment adds one schema guard in `skills/robust-tabular/scripts/common.py`: pandas extension `StringDtype` columns now enter the established categorical preprocessing path.
+- The model portfolio, sampling settings, and candidate selection are unchanged. The change addresses compatibility under newer pandas string inference and was not assigned an expected leaderboard gain.
+- With pandas 2.3.3 and future string inference enabled, all 16 quick runs and all 64 portfolio model runs passed with zero model errors and produced 116 valid candidates.
+- Excluding identifier columns, the regression matrix exercised 96 `StringDtype` modeling features across 12 tasks. The other four tasks contained no `StringDtype` modeling feature and passed as expected no-op regressions.
+- Current format validation, dry compilation, Python syntax, ZIP CRC, path safety, and deterministic archive reconstruction passed.
+
+## s022 Pandas StringDtype compatibility
+
+- Official submission row `55123945`, dated 2026-07-31 01:44:53.140 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,413 bytes, has root `agent.yaml`, and has SHA-256 `fac6942b04e311e8238d805ffcefb7fb638421bf3f09f765715eff33b2f16e08`. Only `skills/robust-tabular/scripts/common.py` changed from the retained s015 package.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/pandas-stringdtype-compatibility-s022?scriptVersionId=339179331) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s022 matched the retained public best at displayed precision. The result supports the schema-compatibility repair but does not establish a leaderboard improvement.

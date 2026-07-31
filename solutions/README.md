@@ -25,3 +25,4 @@ Completed scored experiments and their public Kaggle Code references.
 | s019 | 0.822 | [Package Replication s019 (Version 2)](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s019?scriptVersionId=338437903) |
 | s020 | 0.822 | [Package Replication s020 (Version 1)](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s020?scriptVersionId=338687407) |
 | s021 | 0.822 | [Public V9 Package Replication s021 (Version 1)](https://www.kaggle.com/code/beicicc/public-v9-package-replication-s021?scriptVersionId=338969249) |
+| s022 | 0.822 | [Pandas StringDtype Compatibility s022 (Version 1)](https://www.kaggle.com/code/beicicc/pandas-stringdtype-compatibility-s022?scriptVersionId=339179331) |
