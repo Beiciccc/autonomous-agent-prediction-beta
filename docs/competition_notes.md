@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-07-28
+Last reviewed: 2026-08-01
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-07-28.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-08-01.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -231,3 +231,18 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,413 bytes, has root `agent.yaml`, and has SHA-256 `fac6942b04e311e8238d805ffcefb7fb638421bf3f09f765715eff33b2f16e08`. Only `skills/robust-tabular/scripts/common.py` changed from the retained s015 package.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/pandas-stringdtype-compatibility-s022?scriptVersionId=339179331) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s022 matched the retained public best at displayed precision. The result supports the schema-compatibility repair but does not establish a leaderboard improvement.
+
+## 2026-08-01 extension-dtype missing-value experiment
+
+- A targeted fixture reproduced the prior `TypeError` when categorical extension arrays with missing values were filled directly with a new string sentinel. The revised preprocessing materializes categorical values through a stable string representation and normalizes pandas extension-backed inputs before scikit-learn preprocessing.
+- The targeted candidate completed CatBoost, LightGBM, ExtraTrees, and Logistic Regression with zero model errors. Its synthetic end-to-end run recovered a non-constant CatBoost fallback and seven valid portfolio candidates where the prior package fell back to a constant prior and failed before portfolio execution.
+- Across all sixteen visible tasks under default and future string inference, 32/32 native and encoded frame comparisons were exact. All sixteen future-string Logistic Regression OOF and test comparisons had maximum difference `0.0` from s022.
+- Three representative end-to-end tasks completed all 12 model runs with zero errors and produced 22 valid candidates. Across 25 output files, the largest numerical difference from s022 was `4.44e-16`.
+- No solution file or visible-task AUC was used to admit the change. The model portfolio, sampling settings, and candidate selection remained unchanged.
+
+## s023 extension-dtype missing-value compatibility
+
+- Official submission row `55154461`, dated 2026-08-01 05:21:37.487 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,688 bytes, has root `agent.yaml`, and has SHA-256 `6a3c0fc57d5f338a324ff3df52503874f3c537677784ba9cdf3e33bb991ce674`. Deterministic reconstruction, format validation, ADK compilation, Python syntax, CRC, and path-safety checks passed.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/extension-dtype-missing-value-compatibility-s023?scriptVersionId=339426655) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s023 matched the retained public best at displayed precision. The result supports the extension-dtype compatibility repair but does not establish a leaderboard improvement.

@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed scored run, `s022`, reached **0.822** as Kaggle submission `55123945`. It adds one schema-compatibility guard so pandas extension `StringDtype` columns follow the established categorical preprocessing path. A sixteen-task regression matrix passed all 16 quick runs and all 64 portfolio model runs with zero model errors. The official result matched the retained public best at the leaderboard's displayed three-decimal precision, so it supports the compatibility repair without establishing a leaderboard improvement. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-two scored runs have corresponding public Kaggle Code records.
+The latest completed scored run, `s023`, reached **0.822** as Kaggle submission `55154461`. It repairs missing-value handling for pandas categorical and nullable-Boolean extension dtypes while preserving the established model, sampling, and selection configuration. The targeted regression completed all four model families with zero errors; 32/32 preprocessing comparisons across the sixteen visible tasks were exact, and 16/16 Logistic Regression comparisons had zero prediction difference from s022. The official result matched the retained public best at the leaderboard's displayed three-decimal precision, so it supports the compatibility repair without establishing a leaderboard improvement. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-three scored runs have corresponding public Kaggle Code records.
 
 ## Repository layout
 

@@ -26,3 +26,4 @@ Completed scored experiments and their public Kaggle Code references.
 | s020 | 0.822 | [Package Replication s020 (Version 1)](https://www.kaggle.com/code/beicicc/deterministic-portfolio-replication-s020?scriptVersionId=338687407) |
 | s021 | 0.822 | [Public V9 Package Replication s021 (Version 1)](https://www.kaggle.com/code/beicicc/public-v9-package-replication-s021?scriptVersionId=338969249) |
 | s022 | 0.822 | [Pandas StringDtype Compatibility s022 (Version 1)](https://www.kaggle.com/code/beicicc/pandas-stringdtype-compatibility-s022?scriptVersionId=339179331) |
+| s023 | 0.822 | [Extension Dtype Missing-Value Compatibility s023 (Version 1)](https://www.kaggle.com/code/beicicc/extension-dtype-missing-value-compatibility-s023?scriptVersionId=339426655) |
