@@ -246,3 +246,17 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,688 bytes, has root `agent.yaml`, and has SHA-256 `6a3c0fc57d5f338a324ff3df52503874f3c537677784ba9cdf3e33bb991ce674`. Deterministic reconstruction, format validation, ADK compilation, Python syntax, CRC, and path-safety checks passed.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/extension-dtype-missing-value-compatibility-s023?scriptVersionId=339426655) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s023 matched the retained public best at displayed precision. The result supports the extension-dtype compatibility repair but does not establish a leaderboard improvement.
+
+## 2026-08-02 directory-safe CSV discovery experiment
+
+- The prior discovery guard excluded forbidden words only from CSV basenames. A normal-looking file below a forbidden directory, or a symlink resolving outside the task root, could therefore be admitted before a legitimate input.
+- The revised guard checks both lexical and resolved relative paths and rejects any file resolving outside the task root. The model portfolio, prompts, sampling settings, preprocessing, target and identifier inference, candidate order, and final selection are unchanged.
+- A targeted synthetic layout reproduced both prior failure modes. The revised package selected the legitimate 40-row test file, completed the CatBoost quick stage, all four portfolio model families, and eight valid candidates with zero model errors.
+- Across all sixteen visible tasks under default and future string inference, 32/32 safe-file sets, discovered paths, loaded frames, schema fields, and normalized targets were exactly unchanged. No solution labels were read and no visible-task AUC was used to admit the change.
+
+## s024 directory-safe CSV discovery
+
+- Official submission row `55173926`, dated 2026-08-02 00:38:49.573 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,823 bytes, has root `agent.yaml`, and has SHA-256 `69acd0fee6c5ecd3551bbdba1c5589a9344b7720c4210547235c2c29c091da1c`. Deterministic reconstruction, format validation, ADK compilation, Python syntax, CRC, and archive-safety checks passed.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/directory-safe-csv-discovery-s024?scriptVersionId=339584302) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s024 matched the retained public best at displayed precision. The result supports the path-safety repair but does not establish a leaderboard improvement.
