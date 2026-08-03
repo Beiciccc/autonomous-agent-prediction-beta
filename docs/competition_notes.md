@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-08-01
+Last reviewed: 2026-08-03
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-08-01.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-08-03.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -260,3 +260,16 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,823 bytes, has root `agent.yaml`, and has SHA-256 `69acd0fee6c5ecd3551bbdba1c5589a9344b7720c4210547235c2c29c091da1c`. Deterministic reconstruction, format validation, ADK compilation, Python syntax, CRC, and archive-safety checks passed.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/directory-safe-csv-discovery-s024?scriptVersionId=339584302) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s024 matched the retained public best at displayed precision. The result supports the path-safety repair but does not establish a leaderboard improvement.
+
+## 2026-08-03 harness-default selection experiment
+
+- The shipped evaluation harness fills unclaimed final slots from successful submissions in descending public-score order, up to the two-slot limit. A synthetic three-submission check reproduced the zero-, one-, and two-explicit-choice cases without using task data.
+- The s025 archive removes only the root reference to the explicit final-selection stage. The quick and portfolio stages remain reachable; all model code, data handling, retained prompts, sampling settings, candidate generation, and archive metadata are unchanged from s024.
+- Deterministic reconstruction, current format validation, ADK compilation, execution-graph checks, Python syntax, CRC, path safety, duplicate-member, symbolic-link, and junk-file checks passed. No task labels or task-level validation scores were used to admit the change.
+
+## s025 harness-default top-two selection
+
+- Official submission row `55202753`, dated 2026-08-03 05:04:48.290 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,818 bytes, has root `agent.yaml`, and has SHA-256 `72c6a128e5d9855849b1549a97c0cff79b5d900c281ec6485b856a6f008389a4`. Relative to s024, the only changed member is `agent.yaml`, with one deleted selection-stage reference.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/harness-default-top-two-selection-s025?scriptVersionId=339827091) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s025 matched the retained public best at displayed precision. The result establishes successful execution of the harness-default selection policy but does not establish a leaderboard improvement.

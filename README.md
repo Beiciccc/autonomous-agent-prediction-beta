@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed scored run, `s024`, reached **0.822** as Kaggle submission `55173926`. It hardens CSV discovery against forbidden directory paths and files that resolve outside the task root while preserving the established model, sampling, preprocessing, and selection configuration. A targeted synthetic test removed both failure modes; 32/32 discovery and loaded-data comparisons across the sixteen visible tasks were exact. The official result matched the retained public best at the leaderboard's displayed three-decimal precision, so it supports the path-safety repair without establishing a leaderboard improvement. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-four scored runs have corresponding public Kaggle Code records.
+The latest completed scored run, `s025`, reached **0.822** as Kaggle submission `55202753`. It removes the explicit final-selection stage and leaves both final slots to the evaluation harness's documented best-public-score fallback. Every model, preprocessing step, retained prompt, sampling setting, and candidate order remains byte-identical to `s024`; only one root configuration line changed. The official result matched the retained public best at the leaderboard's displayed three-decimal precision, so it records a successful selection-policy change without establishing a leaderboard improvement. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-five scored runs have corresponding public Kaggle Code records.
 
 ## Repository layout
 
