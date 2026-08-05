@@ -29,3 +29,4 @@ Completed scored experiments and their public Kaggle Code references.
 | s023 | 0.822 | [Extension Dtype Missing-Value Compatibility s023 (Version 1)](https://www.kaggle.com/code/beicicc/extension-dtype-missing-value-compatibility-s023?scriptVersionId=339426655) |
 | s024 | 0.822 | [Directory-Safe CSV Discovery s024 (Version 1)](https://www.kaggle.com/code/beicicc/directory-safe-csv-discovery-s024?scriptVersionId=339584302) |
 | s025 | 0.822 | [Harness-Default Top-Two Selection s025 (Version 1)](https://www.kaggle.com/code/beicicc/harness-default-top-two-selection-s025?scriptVersionId=339827091) |
+| s026 | 0.822 | [Recursive Safe Runtime-Root Detection s026 (Version 1)](https://www.kaggle.com/code/beicicc/recursive-safe-runtime-root-detection-s026?scriptVersionId=340247311) |

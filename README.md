@@ -13,7 +13,7 @@ This repository contains:
 
 ## Current status
 
-The latest completed scored run, `s025`, reached **0.822** as Kaggle submission `55202753`. It removes the explicit final-selection stage and leaves both final slots to the evaluation harness's documented best-public-score fallback. Every model, preprocessing step, retained prompt, sampling setting, and candidate order remains byte-identical to `s024`; only one root configuration line changed. The official result matched the retained public best at the leaderboard's displayed three-decimal precision, so it records a successful selection-policy change without establishing a leaderboard improvement. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-five scored runs have corresponding public Kaggle Code records.
+The latest completed scored run, `s026`, reached **0.822** as Kaggle submission `55225307`. It changes runtime-root detection to recognize safe train and test CSV files recursively beneath `/work`, rather than requiring both filenames at the root, while preserving the established data filtering, model portfolio, prompts, sampling settings, and harness-default selection policy. The other eleven regular source files and all ZIP metadata remain byte-identical to `s025`; root-level, environment-override, and forbidden-only behavior are unchanged. The official result matched the retained public best at the leaderboard's displayed three-decimal precision, so it supports the runtime-path compatibility repair without establishing a leaderboard improvement. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-six scored runs have corresponding public Kaggle Code records.
 
 ## Repository layout
 

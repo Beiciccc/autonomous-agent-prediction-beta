@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-08-03
+Last reviewed: 2026-08-05
 
 ## Task
 
@@ -13,7 +13,7 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-08-03.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-08-05.
 - Final competition deadline: 2026-08-06 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
@@ -273,3 +273,17 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,818 bytes, has root `agent.yaml`, and has SHA-256 `72c6a128e5d9855849b1549a97c0cff79b5d900c281ec6485b856a6f008389a4`. Relative to s024, the only changed member is `agent.yaml`, with one deleted selection-stage reference.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/harness-default-top-two-selection-s025?scriptVersionId=339827091) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s025 matched the retained public best at displayed precision. The result establishes successful execution of the harness-default selection policy but does not establish a leaderboard improvement.
+
+## 2026-08-04 recursive-safe runtime-root detection experiment
+
+- The prior runtime-root check considered only root-level CSV basenames under `/work`. When legitimate train and test files were nested below that directory, it fell back to the current working directory even though the existing safe CSV inventory could discover them recursively.
+- The s026 change replaces the root-level glob with that existing recursive, path-safe CSV inventory and compares the discovered basenames. Only one line in `skills/robust-tabular/scripts/common.py` changes; the other 11 regular source files and all ZIP metadata remain byte-identical to s025.
+- A targeted nested-layout end-to-end test recovered task loading, the CatBoost quick stage, all four portfolio model families, and eight valid candidates with zero model errors. Across all sixteen visible tasks under default and future string inference, 32/32 safe-file discovery and loaded-task comparisons were exact. Root-level, explicit environment-override, and forbidden-only behavior were unchanged. No solution labels were read and no visible-task AUC was used to admit the change.
+- Deterministic reconstruction, current format validation, ADK compilation, execution-graph checks, Python syntax, ZIP CRC, path safety, duplicate-member, symbolic-link, and junk-file checks passed.
+
+## s026 recursive-safe runtime-root detection
+
+- Official submission row `55225307`, dated 2026-08-04 01:04:34.350 UTC, reached `COMPLETE` with public score `0.822`.
+- The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,820 bytes, has root `agent.yaml`, and has SHA-256 `4d489202de44679ed4661d7596098ba2e3030fe2fc46bc28bcaf8a2de35a757c`. Relative to s025, the only changed member is `skills/robust-tabular/scripts/common.py`, with one line replacing the root-only glob with the existing safe recursive CSV inventory.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/recursive-safe-runtime-root-detection-s026?scriptVersionId=340247311) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s026 matched the retained public best at displayed precision. The result supports the runtime-path compatibility repair but does not establish a leaderboard improvement.
