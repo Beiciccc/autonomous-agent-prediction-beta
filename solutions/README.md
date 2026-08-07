@@ -1,6 +1,6 @@
-# Public experiment index
+# Final public experiment index
 
-Completed scored experiments and their public Kaggle Code references.
+The competition closed on 2026-08-06 at 23:59 UTC. This finalized index covers all 27 completed scored experiments and their public Kaggle Code references. The final leaderboard score was `0.780`, placing Kun Zhang 79th; Kaggle competition metadata reported 570 teams at close.
 
 | ID | Public score | Kaggle Code |
 | --- | ---: | --- |
@@ -30,3 +30,4 @@ Completed scored experiments and their public Kaggle Code references.
 | s024 | 0.822 | [Directory-Safe CSV Discovery s024 (Version 1)](https://www.kaggle.com/code/beicicc/directory-safe-csv-discovery-s024?scriptVersionId=339584302) |
 | s025 | 0.822 | [Harness-Default Top-Two Selection s025 (Version 1)](https://www.kaggle.com/code/beicicc/harness-default-top-two-selection-s025?scriptVersionId=339827091) |
 | s026 | 0.822 | [Recursive Safe Runtime-Root Detection s026 (Version 1)](https://www.kaggle.com/code/beicicc/recursive-safe-runtime-root-detection-s026?scriptVersionId=340247311) |
+| s027 | 0.822 | [Sample-Declared Target Priority s027 (Version 1)](https://www.kaggle.com/code/beicicc/sample-declared-target-priority-s027?scriptVersionId=340780030) |

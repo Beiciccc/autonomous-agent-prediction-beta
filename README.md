@@ -11,9 +11,11 @@ This repository contains:
 - public leaderboard score history;
 - public Kaggle Code references for completed scored experiments.
 
-## Current status
+## Final status
 
-The latest completed scored run, `s026`, reached **0.822** as Kaggle submission `55225307`. It changes runtime-root detection to recognize safe train and test CSV files recursively beneath `/work`, rather than requiring both filenames at the root, while preserving the established data filtering, model portfolio, prompts, sampling settings, and harness-default selection policy. The other eleven regular source files and all ZIP metadata remain byte-identical to `s025`; root-level, environment-override, and forbidden-only behavior are unchanged. The official result matched the retained public best at the leaderboard's displayed three-decimal precision, so it supports the runtime-path compatibility repair without establishing a leaderboard improvement. The `s003` and `s004` experiments each completed at **0.820** and remain diagnostic results. All twenty-six scored runs have corresponding public Kaggle Code records.
+The competition submission period ended on 2026-08-06 at 23:59 UTC. The final leaderboard result was **0.780**, placing Kun Zhang **79th**; Kaggle competition metadata reported 570 teams at close. The best displayed public score in this project was **0.822**.
+
+The final completed scored run, `s027`, is Kaggle submission `55304471`. It prioritizes a sample-submission-declared prediction column when several train-only columns would otherwise make target inference ambiguous, while preserving preferred-name and single-train-only precedence. Five targeted schema cases passed, all 32 visible-task comparisons across two pandas string-inference modes were unchanged, and a synthetic end-to-end test completed four model families and eight candidates with zero model errors. The 12,818-byte archive differs from `s026` only in `skills/robust-tabular/scripts/common.py`; its SHA-256 is `62d072aeae10fcb1762f1093ef40a5f741e09c32d813d1e0ab0987eeefe1fb3e`. Its public score matched the retained best at displayed precision, supporting a target-inference compatibility repair without establishing a leaderboard improvement. All twenty-seven scored runs have corresponding public Kaggle Code records, and this repository is finalized as the public project record.
 
 ## Repository layout
 

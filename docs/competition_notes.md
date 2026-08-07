@@ -1,6 +1,6 @@
 # Competition notes
 
-Last reviewed: 2026-08-05
+Last reviewed: 2026-08-07
 
 ## Task
 
@@ -13,8 +13,8 @@ The provided data contains sixteen visible synthetic binary-classification tasks
 - Evaluation session limit: 60 minutes.
 - Internal prediction submissions available to a configuration: up to 30 per session.
 - Model-token budget: USD 2.00 per session.
-- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-08-05.
-- Final competition deadline: 2026-08-06 23:59 UTC.
+- Live competition metadata reported a maximum of one leaderboard submission per day on 2026-08-06.
+- The competition submission period closed on 2026-08-06 at 23:59 UTC.
 
 The public and private leaderboard evaluations are separate sessions. The official competition pages remain the source of truth for current limits and rule changes.
 
@@ -287,3 +287,23 @@ The upload is a `submission.zip` archive. Its root must contain `agent.yaml`; re
 - The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,820 bytes, has root `agent.yaml`, and has SHA-256 `4d489202de44679ed4661d7596098ba2e3030fe2fc46bc28bcaf8a2de35a757c`. Relative to s025, the only changed member is `skills/robust-tabular/scripts/common.py`, with one line replacing the root-only glob with the existing safe recursive CSV inventory.
 - [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/recursive-safe-runtime-root-detection-s026?scriptVersionId=340247311) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
 - Interpretation: s026 matched the retained public best at displayed precision. The result supports the runtime-path compatibility repair but does not establish a leaderboard improvement.
+
+## 2026-08-06 sample-declared target-priority experiment
+
+- When several train-only columns were plausible binary targets, the prior fallback checked arbitrary binary columns before consulting the prediction schema in `sample_submission.csv`. The revised order gives precedence to a sample-declared prediction column only when it is train-only; preferred names and the unambiguous single-train-only rule retain higher precedence.
+- Five targeted cases passed: the sample declaration wins only in the intended ambiguous case, while preferred-name, single-train-only, missing-sample, and shared-column behavior remains unchanged.
+- Across all sixteen visible tasks under default and future string inference, 32/32 safe-file inventories, discovered paths, and loaded-task results were exactly unchanged. A separate synthetic end-to-end task completed the CatBoost quick stage, all four portfolio model families, and eight valid candidates with zero model errors; the largest numerical output difference from s026 was `2.22e-16`.
+- No solution labels or visible-task AUC were used. The model portfolio, prompts, sampling settings, candidate order, and final selection behavior are unchanged. Deterministic reconstruction, current format validation, ADK compilation, Python syntax, ZIP CRC, path safety, source closure, symbolic-link, and junk-file checks passed.
+
+## s027 sample-declared target priority
+
+- Official submission row `55304471`, dated 2026-08-06 17:59:18.003 UTC, reached `COMPLETE` with public score `0.822` and final private score `0.780`.
+- The uploaded archive contains 18 ZIP entries and 12 regular source files, is 12,818 bytes, has root `agent.yaml`, and has SHA-256 `62d072aeae10fcb1762f1093ef40a5f741e09c32d813d1e0ab0987eeefe1fb3e`. Relative to s026, the only changed member is `skills/robust-tabular/scripts/common.py`; all other source payloads and ZIP metadata are unchanged.
+- [Public Kaggle Code Version 1](https://www.kaggle.com/code/beicicc/sample-declared-target-priority-s027?scriptVersionId=340780030) reached `KernelWorkerStatus.COMPLETE`, reproduced the scored package byte for byte, and was anonymously accessible.
+- Interpretation: s027 matched the retained public best at displayed precision. The result supports the target-inference compatibility repair but does not establish a leaderboard improvement.
+
+## Competition close
+
+- The submission period closed on 2026-08-06 at 23:59 UTC, and the final leaderboard was published on 2026-08-07.
+- Kun Zhang finished 79th with final score `0.780`; Kaggle competition metadata reported 570 teams at close.
+- This repository records 27 completed official submissions and their corresponding public Kaggle Code releases. It is finalized as the public record for the competition.
